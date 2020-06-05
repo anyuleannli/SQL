@@ -1,4 +1,4 @@
-# Medium 1393 Capital Gain/Loss
+# Medium 1393 Capital Gain//Loss
 
 select stock_name,  sum(case when operation = 'Buy' then -price else price end) as capital_gain_loss
 from Stocks
