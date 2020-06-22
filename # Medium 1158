@@ -1,0 +1,5 @@
+select U.user_id as buyer_id, U.join_date, ifnull(sum(case when item_id is not null then 1 else 0 end), 0) as orders_in_2019
+From users U 
+Left join orders O 
+On U.user_id=O.buyer_id and YEAR(O.order_date)=2019
+Group by U.user_id
